@@ -1,4 +1,4 @@
-HandlebarsComponent = {
+HandlebarsMixin = {
 	fromHandlebars: true,
 	
 	_contentBlockWithData(contentBlock, parent, data) {

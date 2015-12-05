@@ -22,6 +22,7 @@ Package.onUse(function (api) {
 
 	api.export([
 		'HelperLookupBlazeReact', 
-		'Template'
+		'Template',
+		'Each', 'With', 'If', 'Unless'
 	]);
 });
