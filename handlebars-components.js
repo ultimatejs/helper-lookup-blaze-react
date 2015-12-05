@@ -1,5 +1,5 @@
 /**
-* HERE'S HOW YOU TRANSPILE AN #each BLOCK:
+* HERE'S HOW WE TRANSPILE AN #each BLOCK:
 *
 * let contentBlock 	= function() { return <CONTENT_BETWEEN_#EACH_AND_ELSE_OR_/EACH />; } ;	
 * let elseBlock 		= function() { return <CONTENT_BETWEEN_ELSE_AND_/EACH />; ;	

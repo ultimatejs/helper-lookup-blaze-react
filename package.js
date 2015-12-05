@@ -8,9 +8,9 @@ Package.describe({
 
 Package.onUse(function (api) {
 	api.versionsFrom('METEOR@1.2.1');
-	api.use('underscore');
-	api.use('ecmascript@0.1.5');
 	
+	api.use('ecmascript@0.1.5');
+	api.use('underscore');
 	
 	api.addFiles([
 		'handlebars-mixin.js',
