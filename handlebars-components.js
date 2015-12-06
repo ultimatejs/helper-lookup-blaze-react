@@ -26,7 +26,7 @@ Each = React.createClass({
 				return this._contentBlockWithData(contentBlock, parent, item);
 			});
 		}
-		else return elseBlock.call(parent);		//i.e. where block was defined
+		else return elseBlock.call(parent);		//i.e. run in context where block defined
 	}
 });
 
