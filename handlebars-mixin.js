@@ -10,7 +10,14 @@ HandlebarsMixin = {
 	}
 	
 	render() {
-		return React.createElement('span', this.props, this.renderFunc());
+		return this._wrap(this.renderFunc, this.props);
+	},
+	
+	_wrap(renderFunc, props) {
+		//`render` must return a single element, not an array of elements.
+		//perhaps later we replace this with a better wrapping approach.
+		//see: https://github.com/facebook/react/issues/2127
+		return React.createElement('span', props, renderFunc.call(this)); 
 	},
 	
 	
