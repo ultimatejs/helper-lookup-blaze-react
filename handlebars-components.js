@@ -1,8 +1,19 @@
 /**
+{{#each posts}}
+	<div>
+		<h1>{{title}}</h1>
+		<p>{{body}}</p>
+	</div>
+{{else}}
+  <div>sorry, no posts</div>
+{{/each}
+
+becomes:
+
 <Each 
-	parent={this} data={this.__lookup('$1', [$2])} 
-	contentBlock={() => <CONTENT_BETWEEN_#EACH_AND_ELSE_OR_/EACH /> } 
-	elseBlock={() => <CONTENT_BETWEEN_ELSE_AND_/EACH /> } 
+	parent={this} data={this.__lookup('list')} 
+	contentBlock={() => <div><h1>{{title}}</h1><p>{{body}}</p></div> } 
+	elseBlock={() => <div>sorry, no posts</div> } 
 />
 **/
 Each = React.createClass({
