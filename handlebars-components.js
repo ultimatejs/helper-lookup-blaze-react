@@ -11,8 +11,8 @@
 becomes:
 
 <Each 
-	parent={this} data={this.__lookup('list')} 
-	contentBlock={() => <div><h1>{{title}}</h1><p>{{body}}</p></div> } 
+	parent={this} data={this.__lookup('posts')} 
+	contentBlock={() => <div><h1>{this.__lookup('title')}</h1><p>{this.__lookup('body')}</p></div> } 
 	elseBlock={() => <div>sorry, no posts</div> } 
 />
 **/
