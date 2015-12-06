@@ -1,12 +1,10 @@
 /**
-* HERE'S HOW WE TRANSPILE AN #each BLOCK:
-*
-* let contentBlock 	= function() { return <CONTENT_BETWEEN_#EACH_AND_ELSE_OR_/EACH />; } ;	
-* let elseBlock 		= function() { return <CONTENT_BETWEEN_ELSE_AND_/EACH />; ;	
-*	
-* <Each parent={this} data={this.__lookup'($1', [$2])} contentBlock={contentBlock} elseBlock={elseBlock} />
+* <Each 
+*		parent={this} data={this.__lookup'($1', [$2])} 
+*		contentBlock={() => <CONTENT_BETWEEN_#EACH_AND_ELSE_OR_/EACH />} 
+* 	elseBlock={() => <CONTENT_BETWEEN_ELSE_AND_/EACH /> } 
+* />
 **/
-
 Each = React.createClass({
 	mixins: [HandlebarsMixin],
 	renderFunc() {
